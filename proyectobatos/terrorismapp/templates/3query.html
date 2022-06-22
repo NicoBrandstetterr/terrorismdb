@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <p> Resultado de la consulta query3</p>
+
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td{
+                padding:10px;
+            }
+        </style>
+        <table style="background-color:#a8cfff">
+            <tr>
+                <th> eventid </th>
+                <th> Nombre de Grupo </th>
+            </tr>
+            {% for fila in Tabla3 %}
+            <tr>
+                <td> <label for="{{ fila.eventid }}"> <span class="complete-">{{ fila.eventid }}</span></label> </td>
+                <td> <label for="{{ fila.gname }}"> <span class="complete-">{{ fila.gname }}</span></label> </td>
+            </tr>
+            {% endfor %}
+        </table>
+    
+    </body>
+</html>
